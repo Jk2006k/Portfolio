@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>
+                    Hey there!<br>
+                     I’m <span class="hero-text-color">Kishoore</span>
+                </h1>
+                <p>
+                    A Full Stack Web Developer
+                </p>
+            <a href="#about" class="discover-link">Know more About me <i class="fas fa-arrow-down"></i></a>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="./assets/laptop2.jpg" alt="profile-image" class="hero-image">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h2 class="About"><span class="hero-text-color">A</span>bout <span class="hero-text-color">M</span>e <span class="exclaim-mark">!</span></h2>
+            <div class="about image">
+                <img src="./assets/about2.jpg" alt="about-image" class="about-image">
+            </div>  
+            <p class="about-text">
+                    I’m a Full Stack Web Developer <br> with a fast-learning mindset and a passion for creating impactful web applications. I enjoy working on real-world projects with a focus on clean design, security, and scalability. I’m committed to continuously improving my skills and building better every day.            </p>  
+
+        </section>
+        <section class="projects" id="projects">
+            <h2 class="section-title"><span class="hero-text-color">M</span>y <span class="hero-text-color">P</span>rojects</h2>
+            <div class="projects-grid">
+                <div class="project-card disabled" style="background-image: url('./assets/X.jpg');">
+                    <div class="project-label">Currently Working</div>
+                </div>
+                <a href="https://voteaura.onrender.com" target="_blank" class="project-card" style="background-image: url('./assets/Vote.png');">
+                    <div class="project-label">VoteAura</div>
+                </a>
+                <a href="https://zenth-iota.vercel.app" target="_blank" class="project-card" style="background-image: url('./assets/Zenth.jpg');">
+                    <div class="project-label">Zenth</div>
+                </a>
+                <a href="https://note-your-day-hkp.vercel.app" target="_blank" class="project-card" style="background-image: url('./assets/Note.jpg');">
+                    <div class="project-label">Note Your Day</div>
+                </a>
+            </div>
+        </section>
+        <img src="./assets/sleep.jpg" class="final" alt="">
+        <footer class="thank-you-section" id="thankYouSection">
+            <h2><span id="thankYouText"></span><span class="cursor">|</span></h2>
+        </footer>
+
+    </main>
+
+<script>
+    const thankYouMessage = "Thanks for visiting! Hope you enjoyed exploring my work 🙂";
+    const textElement = document.getElementById("thankYouText");
+    const footer = document.getElementById("thankYouSection");
+    let hasTyped = false;
+
+    function typeText(text, index = 0) {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            setTimeout(() => typeText(text, index + 1), 50);
+        }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasTyped) {
+                typeText(thankYouMessage);
+                hasTyped = true;
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(footer);
+</script>
+
+
+    
+</body>
+</html>

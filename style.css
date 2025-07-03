@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    margin-right: 50px;
+    animation: fadeInUp 3s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-text-color {
+    color: #ecae22;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.discover-link {
+    color: #ecae22;
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.discover-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    animation: bounceDotImg 1.2s infinite;
+
+}
+
+.discover-link:hover {
+    transform: translateX(5px);
+}
+
+.discover-link:hover i {
+    transform: translateX(5px);
+}
+
+.hero-image-container {
+    flex: 1;
+    min-width: 400px;
+    max-width: 550px;
+    animation: zoomIn 3s ease forwards;
+    
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.05);
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+
+.about {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.About {
+    width: 100%;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #222;
+    text-align: center;
+    animation: fadeInUp 3s ease forwards;
+}
+
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.8;
+    color: #444;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeInUp 3s ease forwards;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+    animation: bounceDotImg 1.2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.exclaim-mark {
+    display: inline-block;
+    position: relative;
+    animation: bounceDotImg 1.2s infinite;
+    color: #ecae22;
+}
+
+@keyframes bounceDotImg {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-8px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(8px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Projects Section ---------- */
+
+.projects {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 80px;
+    color: #222;
+
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ecae22;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Backgrounds with yellow, white, and black theme --- */
+
+.voteaura {
+    background: linear-gradient(to right, #ecae22, #fff);
+}
+
+.zenth {
+    background: linear-gradient(to right, #000, #ecae22);
+}
+
+.note-your-day {
+    background: linear-gradient(to right, #fff, #000);
+}
+
+.projectx {
+    background: linear-gradient(to right, #ecae22, #000);
+}
+
+
+.project-card {
+    position: relative;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-label {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ecae22;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Disabled ProjectX card */
+.project-card.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+.project-card.disabled .project-label {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.final{
+    flex: 1;
+    margin-top: 200px;
+    margin-left: 370px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 20px;
+    animation: bounceDotImg 1.2s infinite;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.thank-you-section {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    min-height: 100px;
+    position: absolute;
+    top: 2050px;
+    left: 350px;
+    animation: bounceDotImg 1.2s infinite;
+    
+}
+
+.thank-you-section h2 {
+    font-size: 1.6rem;
+    color: #ecae22;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    font-weight: bold;
+    color: #ecae22;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
